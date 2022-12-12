@@ -12,15 +12,12 @@
   "items": [
     {
       "command": {
-        "type": "smart_app_data",
-        "smart_app_data": {
-          "command": "GO_TO_PROMO",
-          "device_location": {
-            "latitude": "55.751704",
-            "longitude": "37.622665"
-          }
-        }
-      }
+                "type": "setcookie",
+                "cookies": {
+                        "SWJSESSIONID": "647072b25f9492c51adabfc41a3bfd1d",
+                        "ONEMORECOOKIE": "123123123asd"
+                }
+            }
     }
   ]
 }
