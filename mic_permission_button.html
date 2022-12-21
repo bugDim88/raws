@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <script>
+            function giveMickPermission() {
+                 navigator.mediaDevices
+                    .getUserMedia({ video: false, audio: true })
+                    .then((stream) => {
+                      console.log("YOU GOT MIC PERMISSION");
+                      window.localStream = stream; // A
+                      window.localAudio.srcObject = stream; // B
+                      window.localAudio.autoplay = true; // C
+                    })
+                    .catch((err) => {
+                      console.error(`you got an error: ${err}`);
+                    });
+            }
+        </script>
+        <title>Проверка запроса на запись аудио</title>
+    </head>
+    <body>
+        <p id="demo">Для запроса пермишена на микрофон - нажми эту кнопку.</p>
+        <button name="button" type="button" onclick="giveMickPermission()" style="margin: 16px; padding: 16px; background-color: darkblue; color: aliceblue; border: none;border-radius: 4px;font-size: 12px">give_mick_permission</button>
+        
+    </body>
+    </html>
